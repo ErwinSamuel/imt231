@@ -1,14 +1,18 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 int main()
 {
-std::cout<<"***************************************"<<endl;
-std::cout<<"*Bienvenido al juego de la Adivinanza!*"<<endl;
-std::cout<<"***************************************"<<endl;
+cout<<"***************************************"<<endl;
+cout<<"*Bienvenido al juego de la Adivinanza!*"<<endl;
+cout<<"*Ingrese un numero en el rango: 1 a 100 *"<<endl;
+cout<<"***************************************"<<endl;
 
-const int NUMERO_SECRETO = 42;
+srand(time(0));
+const int NUMERO_SECRETO = 1 + rand() % 100;
+cout<<"Numero secreto aleatoriogenerado entre 1 y 100:" << NUMERO_SECRETO << endl;
 int adivina;
-
 bool no_acerto = true;
 int intentos = 0;
 double puntos = 1000.0;
